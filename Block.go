@@ -43,6 +43,10 @@ func NewBlock(data string,prevBlockHas []byte)*Block  {
 	block.Hash = hash
 	return &block
 }
+//
+func (this *Block)ToBytes()[]byte  {
+	return []byte{}
+}
 
 
 //字节化
