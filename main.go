@@ -1,16 +1,22 @@
 package main
 
 import (
+	"fmt"
+	"github.com/boltdb/bolt"
 	"time"
 )
 
 func main()  {
-	//blockChain:=NewBlockChain()
-	//blockChain.AddBlockChain("nihao")
-	//blockChain.AddBlockChain("hangtou")
-	//blockChain.AddBlockChain("shanghai")
-	//blockChain.AddBlockChain("beijing")
-	//blockChain.AddBlockChain("tianjin")
+	blockChain:=NewBlockChain()
+	blockChain.AddBlockChain("nihao1")
+	blockChain.db.View(func(tx *bolt.Tx) error {
+		b:=tx.Bucket([]byte(blockBucket))
+		b.ForEach(func(k, v []byte) error {
+			fmt.Printf("%x\n",k)
+			return nil
+		})
+		return nil
+	})
 /*	for i,block:= range blockChain.Blocks{
 		fmt.Printf("============%d===========\n",i)
 		fmt.Printf("Data:%s\n",block.Data)

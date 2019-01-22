@@ -15,12 +15,13 @@ type ProofOfWork struct {
 
 //初始化工作量证明
 func NewProofOfWork(block Block) *ProofOfWork {
-	targetStr:="0000100000000000000000000000000000000000000000000000000000000000"
-	bigIntTemp:=big.Int{}
-	bigIntTemp.SetString(targetStr,16)
+	fmt.Println("准备计算开始")
+	//targetStr:="0000100000000000000000000000000000000000000000000000000000000000"
+	bigIntTemp:=big.NewInt(1)
+	bigIntTemp.Lsh(bigIntTemp,256-block.Bits)
 	pow:=ProofOfWork{
 		block:block,
-		targetStr:bigIntTemp,
+		targetStr:*bigIntTemp,
 	}
 
 	return &pow
