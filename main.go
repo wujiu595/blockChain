@@ -9,7 +9,6 @@ func main()  {
 	blockChain.AddBlockChain("shanghai")
 	blockChain.AddBlockChain("beijing")
 	blockChain.AddBlockChain("tianjin")
-
 	for i,block:= range blockChain.Blocks{
 		fmt.Printf("============%d===========\n",i)
 		fmt.Printf("Data:%s\n",block.Data)
