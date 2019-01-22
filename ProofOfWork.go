@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"fmt"
+	"math"
 	"math/big"
 )
 
@@ -14,7 +15,7 @@ type ProofOfWork struct {
 
 //初始化工作量证明
 func NewProofOfWork(block Block) *ProofOfWork {
-	targetStr:="0000000100000000000000000000000000000000000000000000000000000000"
+	targetStr:="0000100000000000000000000000000000000000000000000000000000000000"
 	bigIntTemp:=big.Int{}
 	bigIntTemp.SetString(targetStr,16)
 	pow:=ProofOfWork{
@@ -28,7 +29,7 @@ func NewProofOfWork(block Block) *ProofOfWork {
 func (this *ProofOfWork)Run() (uint64,[]byte){
 	var nonce uint64
 	var hash [32]byte
-	for{
+	for nonce<=math.MaxInt64{
 		var bigIntTmp big.Int
 		//进行sha256计算，获得hash值
 		hash=sha256.Sum256(this.PrepareData(nonce))
