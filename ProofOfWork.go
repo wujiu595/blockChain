@@ -14,7 +14,7 @@ type ProofOfWork struct {
 
 //初始化工作量证明
 func NewProofOfWork(block Block) *ProofOfWork {
-	targetStr:="0010000000000000000000000000000000000000000000000000000000000000"
+	targetStr:="0000000100000000000000000000000000000000000000000000000000000000"
 	bigIntTemp:=big.Int{}
 	bigIntTemp.SetString(targetStr,16)
 	pow:=ProofOfWork{
@@ -32,9 +32,9 @@ func (this *ProofOfWork)Run() (uint64,[]byte){
 		var bigIntTmp big.Int
 		//进行sha256计算，获得hash值
 		hash=sha256.Sum256(this.PrepareData(nonce))
-		fmt.Printf("%x\n",hash)
 		bigIntTmp.SetBytes(hash[:])
 		if bigIntTmp.Cmp(&this.targetStr) ==-1{
+			fmt.Printf("挖矿成功%x\n",hash)
 			break
 		}
 		nonce++
@@ -56,4 +56,16 @@ func (this *ProofOfWork)PrepareData(nonce uint64)[]byte{
 	}
 	blockInfo:=bytes.Join(tempByte,[]byte(""))
 	return blockInfo
+}
+
+//验证数据是否有效
+func (this *ProofOfWork)IsValid()bool  {
+	block:=this.block
+	hash:=sha256.Sum256(this.PrepareData(block.Nonce))
+
+	var bigIntTemp big.Int
+
+	bigIntTemp.SetBytes(hash[:])
+
+	return bigIntTemp.Cmp(&this.targetStr)==-1
 }

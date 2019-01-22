@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"crypto/sha256"
 	"encoding/binary"
 	"time"
 )
@@ -37,7 +36,6 @@ func NewBlock(data string,prevBlockHas []byte)*Block  {
 		Bits:0,
 		Nonce :0,
 		Data:[]byte(data),
-
 	}
 	pow:=NewProofOfWork(block)
 	nonce,hash:=pow.Run()
@@ -46,23 +44,10 @@ func NewBlock(data string,prevBlockHas []byte)*Block  {
 	return &block
 }
 
-//计算当前区块的hash
-func (b *Block)setHas()  {
-	var blockInfo []byte
-	blockInfo=append(blockInfo,Uint2Bytes(b.Version)...)
-	blockInfo = append(blockInfo,b.PrevBlockHash...)
-	blockInfo = append(blockInfo, b.MerkelRoot...)
-	blockInfo = append(blockInfo, Uint2Bytes(b.TimeStamp)...)
-	blockInfo = append(blockInfo, Uint2Bytes(b.Bits)...)
-	blockInfo = append(blockInfo, Uint2Bytes(b.Nonce)...)
-	blockInfo = append(blockInfo,b.Data...)
-	Hash:=sha256.Sum256(blockInfo)
-	b.Hash = Hash[:]
-}
+
 //字节化
 func Uint2Bytes(src interface{})[]byte{
 	bin_buf := bytes.NewBuffer([]byte{})
 	binary.Write(bin_buf, binary.BigEndian, src)
 	return bin_buf.Bytes()
 }
-//TODO
