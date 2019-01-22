@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58793227-dbfa-4848-b530-f2676ae1f24e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Block.go" beforeDir="false" afterPath="$PROJECT_DIR$/Block.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockChain" beforeDir="false" afterPath="$PROJECT_DIR$/BlockChain" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockChain.go" beforeDir="false" afterPath="$PROJECT_DIR$/BlockChain.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProofOfWork.go" beforeDir="false" afterPath="$PROJECT_DIR$/ProofOfWork.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="58793227-dbfa-4848-b530-f2676ae1f24e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockChain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
-              <caret line="39" column="62" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="62" />
+            <state relative-caret-position="52">
+              <caret line="65" column="34" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="34" />
               <folding>
                 <element signature="e#14#57#0" expanded="true" />
               </folding>
@@ -93,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="336">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
               <folding>
                 <element signature="e#269#642#0" />
               </folding>
@@ -129,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="156" />
     <option name="width" value="1168" />
     <option name="height" value="1165" />
@@ -206,7 +198,7 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1372" extended-state="7" />
+    <frame x="0" y="0" width="2560" height="1372" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24979983" />
@@ -300,16 +292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#269#642#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Block.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-212">
@@ -319,10 +301,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockChain.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-500">
-          <caret line="39" column="62" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="62" />
+        <state relative-caret-position="52">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="34" />
           <folding>
             <element signature="e#14#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="e#269#642#0" />
           </folding>
         </state>
       </provider>
